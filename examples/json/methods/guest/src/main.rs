@@ -24,6 +24,7 @@ fn main() {
     let sha = *Impl::hash_bytes(&data.as_bytes());
     let data = parse(&data).unwrap();
     let proven_val = data["critical_data"].as_u32().unwrap();
+    // put data into receipt
     let out = Outputs {
         data: proven_val,
         hash: sha,
